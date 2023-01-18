@@ -5,24 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/stylesAddProperty.css" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Rubik"
+    rel="stylesheet"
+  />
     <title>AgregarVideo</title>
   </head>
   <body>
-    <header>
-      <h2 id="title"><a href="../index.html" id="link">PRINCIPAL</a></h2>
+    <header class="menu">
+      <h3 class="text_menu">Carrera 34 # 5-45 (Cali-Colombia)</h3>
+      <h3 class="text_menu">(+57) 323 347 39 26</h3>
+      <h3 class="text_menu" id="date">Monday 16/01/2023</h3>      
     </header>
+    <header class="main_menu">
+      <figure class="logo_main_menu">
+        <img src="../images/Logo.png" alt="" class="logo_main_menu_favorite"/>
+      </figure>
+      <h3 class="casa"><a href="../index.html" class="casa_favorite">casa<b>Royal</b></a> </h3>
+    </header>
+    
+    <article class="article_Title_properties">
+        <h1 class="title" id="title"><b>ADD</b> PROPERTIES</h1>
+        <h3 class="Subtitle_properties">CASAROYAL REAL ESTATE AGENCY</h3>
+      
+    </article>
+
+
     <main class="Main">
       <form class="form">
 
-        <label for="name" id="attribute1"> Name </label>
+        <label for="name"> name </label>
         <input id="name" type="text" placeholder="
         Enter the name of the house"/>
 
-        <label for="id" id="attribute2"> id </label>
+        <label for="id"> id </label>
         <input id="id" type="text" placeholder="
         Enter the id of the house"/>
 
-        <label for="ubication" id="attribute3"> ubication </label>
+        <label for="ubication"> ubication </label>
         <select name="" id="ubication">
           <option value="">Select a option</option>
           <option value="north">north</option>
@@ -31,57 +51,57 @@
           <option value="west">west</option>
         </select>
 
-        <label for="area" id="attribute4"> area </label>
-        <input id="area" type="text" placeholder="
+        <label for="areaTotal"> area </label>
+        <input id="areaTotal" type="text" placeholder="
         Enter the area on square meter "/>
 
-        <label for="numberRooms" id="attribute5"> numberRooms </label>
+        <label for="numberRooms"> numberRooms </label>
         <input id="numberRooms" type="text" placeholder="
         Enter the number Rooms "/>
 
-        <label for="type" id="attribute6"> type </label>
+        <label for="type"> type </label>
         <select name="" id="type">
           <option value="">Select a option</option>
           <option value="home">home</option>
           <option value="apartment">apartment</option>
         </select>
 
-        <label for="type" id="attribute7"> type contract </label>
+        <label for="contract"> type contract </label>
         <select name="" id="contract">
           <option value="">Select a option</option>
           <option value="rent">rent</option>
           <option value="sale">sale</option>
         </select>
 
-        <label for="price" id="attribute8"> price </label>
+        <label for="price"> price </label>
         <input id="price" type="number" placeholder="
         Enter the price"/>
 
-        <label for="parking" id="attribute9"> parking </label>
+        <label for="parking"> parking </label>
         <input id="parking" type="text" placeholder="
         Enter 'si' or 'no'"/>
 
-        <label for="information" id="attribute10"> information </label>
-        <input id="parking" type="text" placeholder="
+        <label for="information"> information </label>
+        <input id="information" type="text" placeholder="
         Enter the information about it, with direction"/>
 
-        <label for="owner" id="attribute11"> owner </label>
+        <label for="owner"> owner </label>
         <input id="owner" type="text" placeholder="
         Enter owner's name of owner"/>
         
-        <label for="location" id="attribute12"> location </label>
+        <label for="location"> location </label>
         <input id="location" type="text" placeholder="
         Enter the neighborhood"/>
 
-        <label for="description" id="attribute13"> description </label>
+        <label for="description"> description </label>
         <input id="description" type="text" placeholder="
         Enter a description"/>
 
-        <label for="urlImage" id="attribute14"> urlImage </label>
+        <label for="urlImage"> urlImage </label>
         <input id="urlImage" type="text" placeholder="
         Enter url of Image"/>
 
-        <label for="urlImageOwner" id="attribute15"> urlImageOwner </label>
+        <label for="urlImageOwner"> urlImageOwner </label>
         <input id="urlImageOwner" type="text" placeholder="
         Enter url of ImageOwner"/>      
 
@@ -89,6 +109,8 @@
       </form>
     </main>
 
-    <script src="../scripts/agregarVideo.js" type="module"></script>
+    <script src="../javascript/formAddProperty.js" type="module"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   </body>
 </html>

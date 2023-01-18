@@ -3,6 +3,7 @@ import { printDetails } from "../modules/printDetailsCardProperties.js";
 
 
 const containerDetails = document.getElementById("detailsProperty");
+console.log(containerDetails);
 
 let properties = [];
 
@@ -20,5 +21,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         alert(error);
     };
 });
+
+
+
+
 
 

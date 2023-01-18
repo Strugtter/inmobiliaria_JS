@@ -1,10 +1,11 @@
-const deleteDataFetch = async (url)=>{
+const deleteDataFetch = async (url) => {
     try {
         const option = {
             method: 'DELETE',
         };
-       const data = await fetch(url,option)
-       return data;
+        const response = await fetch(url, option);
+        const resp = await response.json();
+        return resp;
     } catch (error) {
         console.log(error);
     }

@@ -1,7 +1,8 @@
+//import { fechaAll } from "../javascript/script.js";
 
 export const printAllDetails = (container, arrayProperties) => {
-    container.innerHTML = "";
 
+    container.innerHTML = "";
     arrayProperties.forEach((properties) => {
         const article = document.createElement("article");
         article.classList.add("main_card_all");
@@ -14,7 +15,7 @@ export const printAllDetails = (container, arrayProperties) => {
         <article class ="information">
             <h4 class="card_information">Name: ${properties.name}</h4> 
             <h4 class="card_information">Location: ${properties.location}</h4>  
-            <h4 class="card_information"> ${properties.information}</h4>          
+            <h4 class="card_information"> Information: ${properties.information}</h4>          
             <h4 class="card_information">Owner: ${properties.owner}</h4>
             <h4 class="card_information">Ubication: ${properties.ubication}</h4>
             <h4 class="card_information">Area total: ${properties.areaTotal}</h4>
@@ -34,3 +35,25 @@ export const printAllDetails = (container, arrayProperties) => {
         container.appendChild(article);
     });
 };
+
+ // date 
+
+ // Fecha del main 
+let calendar = new Date();
+let day = new Array(7);
+day[0] = "Domingo";
+day[1] = "Lunes";
+day[2] = "Martes";
+day[3] = "Miercoles";
+day[4] = "Jueves";
+day[5] = "Viernes";
+day[6] = "Sabado";
+
+let nameday = day[calendar.getDay()];
+let fecha = calendar.getDate();
+let mes = calendar.getMonth() + 1;
+let ano = calendar.getFullYear();
+let fechaAll = `${nameday} ${fecha}/${mes}/${ano}`
+const containerDate = document.getElementById("date");
+containerDate.innerHTML = fechaAll;
+

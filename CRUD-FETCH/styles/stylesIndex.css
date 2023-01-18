@@ -167,6 +167,8 @@ body {
 .main_card {
   width: 398px;
   height: 519px;
+  border: 0.5px solid #8c8c8c;;
+  border-radius: 7px;
 }
 
 .card_image {
@@ -254,22 +256,26 @@ body {
 
 .button_emoticons {
   display: flex;
-  gap: 10px;
+  gap: 30px;
 }
 
 .card_delete, .card_edit, .card__favorite{
   border-color: transparent;
   background-color: white;
+  font-size: 25px;
 }
 
 .card_delete:hover, .card_edit:hover, .card__favorite:hover {
   color: #2a41e8;
+  cursor: pointer;
 } 
 
 .card_delete, .card_edit, .card__favorite {
   width: 10px;
-  height: 15px;
-} 
+  height: 15px; 
+}
 
-
+html{
+  scroll-behavior:smooth
+}
 

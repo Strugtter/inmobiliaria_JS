@@ -8,7 +8,7 @@
 
 body {
   font-family: "Rubik";
-  width: 1735px;
+  width: 1735px;  
 }
 
 .menu {
@@ -29,7 +29,6 @@ body {
   color: white;
   text-decoration: none;
 }
-
 .main_menu {
   display: flex;
   width: 1735px;
@@ -55,10 +54,10 @@ body {
 }
 
 .casa_favorite{
-  font-weight: lighter;
-  color: #4b4d4f;
-  font-size: 28px;
-  text-decoration: none;
+    font-weight: lighter;
+    color: #4b4d4f;
+    font-size: 28px;
+    text-decoration: none;
 
 }
 
@@ -165,20 +164,19 @@ body {
   border-radius: 7px;
 }
 
-#detailsProperty {
+#contenedor {
   display: flex;
   gap: 25px;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-
-
+  justify-content: space-evenly;
+  padding: 10px;
 }
 
 .main_card {
   width: 398px;
   height: 519px;
+  border: 0.5px solid #8c8c8c;;
+  border-radius: 7px;
 }
 
 .card_image {
@@ -266,26 +264,26 @@ body {
 
 .button_emoticons {
   display: flex;
-  gap: 10px;
+  gap: 30px;
 }
 
 .card_delete, .card_edit, .card__favorite{
   border-color: transparent;
   background-color: white;
+  font-size: 25px;
 }
 
 .card_delete:hover, .card_edit:hover, .card__favorite:hover {
   color: #2a41e8;
+  cursor: pointer;
 } 
 
 .card_delete, .card_edit, .card__favorite {
   width: 10px;
-  height: 15px;
+  height: 15px;  
 } 
 
-.main_card_all{
-    display: flex;
-}
+
 
 
 
