@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/stylesIndex.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="menu">
+      <h3 class="text_menu">Carrera 34 # 5-45 (Cali-Colombia)</h3>
+      <h3 class="text_menu">(+57) 323 347 39 26</h3>
+      <h3 class="text_menu">Monday 16/01/2023</h3>
+      <h3 class="text_menu"><a class="text_menu" href="./pages/addProperty.html">Agregar property</a></h3>
+
+
+    </header>
+    <header class="main_menu">
+      <figure class="logo_main_menu">
+        <img src="./images/Logo.png" alt="" />
+      </figure>
+      <h3 class="casa">casa<b>Royal</b></h3>
+      <nav id="main_nav">
+        <ul>
+          <li class="item_nav"><a href="#">HOMEPAGE</a></li>
+          <li class="item_nav"><a href="#">PROPERTIES</a></li>
+          <li class="item_nav"><a href="#">FAVORITE</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="main_section">
+        <section class="main_section_filtros">
+          <article class="main_section_button">
+            <article class="main_section_button_type">
+              <label for="" class="label_filter">Type contract</label>
+              <select name="type" id="type-select">
+                <option value="">Select type</option>
+                <option value="rent" id="buy">Rent</option>
+                <option value="sale" id="sale">Sale</option>
+              </select>
+            </article>
+
+            <article class="main_section_button_type">
+              <label for="" class="label_filter">Ubication</label>
+              <select name="ubication" id="ubication-select">
+                <option value="">Select ubication</option>
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+                <option value="west">West</option>
+              </select>
+            </article>
+
+            <article class="main_section_button_type">
+              <input
+                type="text"
+                placeholder="search properties, keywords"
+                id="buscarProperties"
+              />
+            </article>
+            <button id="buscar">FIND PROPERTIES</button>
+          </article>
+        </section>
+      </section>
+
+      <article class="article_Title_properties">
+          <h3 class="Subtitle_properties">CASAROYAL REAL ESTATE AGENCY</h3>
+        <h1 class="Title_properties"><b>FEATURES</b> PROPERTIES</h1>
+      </article>
+
+      <section id="contenedorProperties">
+        <article class="main_card"></article>
+      </section>
+    </main>
+
+    <script src="./javascript/script.js" type="module"></script>
+    <script src="./helpers/getData.js" type="module"></script>
+    <script src="./modules/selectToFilter.js" type="module"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
