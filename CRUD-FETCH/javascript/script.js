@@ -65,11 +65,16 @@ document.addEventListener("click", async (event) => {
                 );
                 const idPropertyDelete = parseInt(target.name);
                 const urlDelete = `${urlPropiedades}/${idPropertyDelete}`;
+                const urlDeleteFavorito = `${urlFavoritos}/${idPropertyDelete}`;
                 console.log(urlDelete);
                 try {
                     await deleteDataFetch(urlDelete);
                     properties = await getDataFetch(urlPropiedades);
                     printCardProperties(containerProperties, properties);
+
+                    await deleteDataFetch(urlDeleteFavorito);
+                    propertiesFavoritas = await getDataFetch(urlFavoritos);
+                    printCardProperties(containerProperties, propertiesFavoritas);
 
                 } catch (error) {
                     console.log('No se pudo eliminar hay un error' + error);
@@ -78,11 +83,13 @@ document.addEventListener("click", async (event) => {
             }
         })
     }
+
     console.log(target.classList.contains("card_edit"));
     // Function edit property
     if (target.classList.contains("card_edit")) {
         sessionStorage.setItem("editProperty", JSON.stringify(target.name));
         location.href = "../pages/addProperty.html"
+        sessionStorage
     }
 
     //Add favorite

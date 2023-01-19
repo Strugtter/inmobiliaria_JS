@@ -95,6 +95,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.main_title{
+  position: absolute;
+  top: 130px;
+  font-size: 42px;
+  color: white;
+  left: 230px;
+  font-weight: 500;
+}
+
+.main_Subtitle{
+  position: absolute;
+  top: 200px;
+  font-weight: lighter;
+  font-size: 18px;
+  color: white;
+  left: 230px;
 }
 
 .main_section_filtros {
@@ -167,8 +186,13 @@ body {
 .main_card {
   width: 398px;
   height: 519px;
-  border: 0.5px solid #8c8c8c;;
+  border: 0.5px solid #8c8c8c;
   border-radius: 7px;
+  position: relative;
+}
+
+.main_card:hover .card_delete,.main_card:hover .card_edit, .main_card:hover .card__favorite {
+  display: block;
 }
 
 .card_image {
@@ -256,26 +280,149 @@ body {
 
 .button_emoticons {
   display: flex;
-  gap: 30px;
+  gap: 5px;
 }
 
-.card_delete, .card_edit, .card__favorite{
-  border-color: transparent;
+.card_type_button {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  width: 62px;
+  height: 30px;
+  border-radius: 4px;
+  position: absolute;
+  color: white;
+  top: 25px;
+  left: 15px;
+  background-color: #2a42e8;
+  border: transparent;
+}
+
+.card_contract_button{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  width: 78px;
+  height: 30px;
+  border-radius: 4px;
+  position: absolute;
+  color: white;
+  top: 25px;
+  left: 90px;
+  background-color: #FF5E15;
+  border: transparent;
+}
+
+.card_price_button{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  width: 128px;
+  height: 30px;
+  border-radius: 4px;
+  position: absolute;
+  color: blue;
+  top: 220px;
+  left: 15px;
   background-color: white;
+  border: transparent;
+}
+
+
+
+.card__favorite {
+  background-color: transparent;
+  border: transparent;
+  color: blue;
   font-size: 25px;
+  position: absolute;
+  top: 85px;
+  left: 360px;
+  display: none;
 }
 
-.card_delete:hover, .card_edit:hover, .card__favorite:hover {
-  color: #2a41e8;
+.card_edit{
+  color: yellow;
+  background-color: transparent;
+  border: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 50px;
+  left: 360px;
+  display: none;
+
+}
+
+.card_delete{
+  font-weight: bolder;
+  color: red;
+  background-color: transparent;
+  border: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 25px;
+  left: 360px;
+  display: none;
+}
+
+
+.card__area{
+  background-image: url(../images/Icon_Area.png);
+  width: 15px;
+  height: 15px;
+}
+
+.card__parking{
+  background-image: url(../images/Parking.png);
+  width: 15px;
+  height: 15px;
+}
+
+.card__rooms{
+  background-image: url(../images/rooms.png);
+  width: 15px;
+  height: 15px;
+}
+
+
+
+
+.card_delete:hover,
+.card_edit:hover,
+.card__favorite:hover {
+  color: red;
   cursor: pointer;
-} 
+}
 
-.card_delete, .card_edit, .card__favorite {
+.card_delete,
+.card_edit,
+.card__favorite {
   width: 10px;
-  height: 15px; 
+  height: 15px;
 }
 
-html{
-  scroll-behavior:smooth
+html {
+  scroll-behavior: smooth;
 }
 
+.button_Submit_Orange{
+  margin-left: 173px;
+  width: 199px;
+  height: 100%;
+  background-color: #FF5E14;
+  font-size: 16px;
+  border: transparent;
+  color: white;
+  font-weight: 500;
+}
+
+.button_LOGIN_Orange{
+  margin-left: 420px;
+  width: 199px;
+  height: 100%;
+  background-color: transparent;
+  font-size: 16px;
+  border: transparent;
+  color: white;
+  font-weight: 500;
+}

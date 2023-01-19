@@ -26,9 +26,7 @@ export const printAllDetails = (container, arrayProperties) => {
             <h4 class="card_information">Parking: ${properties.parking}</h4>
             <h4 class="card_information">Description: ${properties.description}</h4>
             <article class ="button_emoticons">   
-                <button class ="card_delete" name='${properties.id}'> ✖ </button>
-                <button class ="card_edit" name='${properties.id}'> ✏ </button>
-                <button class="card__favorite" name='${properties.id}'>❤</button>
+
             </article>
         </article>
         `;

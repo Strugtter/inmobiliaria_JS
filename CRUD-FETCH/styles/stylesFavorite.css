@@ -177,6 +177,7 @@ body {
   height: 519px;
   border: 0.5px solid #8c8c8c;;
   border-radius: 7px;
+  position: relative;
 }
 
 .card_image {
@@ -267,10 +268,56 @@ body {
   gap: 30px;
 }
 
+.card_type_button {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  width: 62px;
+  height: 30px;
+  border-radius: 4px;
+  position: absolute;
+  color: white;
+  top: 25px;
+  left: 15px;
+  background-color: #2a42e8;
+  border: transparent;
+}
+
+.card_contract_button{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  width: 78px;
+  height: 30px;
+  border-radius: 4px;
+  position: absolute;
+  color: white;
+  top: 25px;
+  left: 90px;
+  background-color: #FF5E15;
+  border: transparent;
+}
+
+.card_price_button{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  width: 128px;
+  height: 30px;
+  border-radius: 4px;
+  position: absolute;
+  color: blue;
+  top: 220px;
+  left: 15px;
+  background-color: white;
+  border: transparent;
+}
+
 .card_delete, .card_edit, .card__favorite{
   border-color: transparent;
   background-color: white;
-  font-size: 25px;
+  font-size: 30px;
+  color: red;
 }
 
 .card_delete:hover, .card_edit:hover, .card__favorite:hover {

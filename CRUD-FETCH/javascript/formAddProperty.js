@@ -9,6 +9,8 @@ const urlPropiedades = 'http://localhost:3000/propiedades';
 const form = document.querySelector(".form");
 // Capture inputs
 const valuesForm = Object.values(form);
+console.log(valuesForm);
+
 
 
 // Edit property
@@ -18,7 +20,9 @@ const editForm = editFormStr ? parseInt(editFormStr) : null;
 
 //MOdificar title
 const title = document.querySelector(".title");
+
 const buttonSubmit = valuesForm[valuesForm.length - 1];
+
 
 buttonSubmit.innerHTML = editForm ? "Guardar cambios" : "Crear property";
 
@@ -29,8 +33,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         if (editForm) {
             //   const urlEdit = `${urlPropiedades}/${editForm}`;
-            property = await getDataFetch(url);
+            property = await getDataFetch(url);  
+            console.log(property);
+            console.log(property["owner"]);
             title.innerText = editForm ? `Update date of ${property.name}` : "Agregar nuevo personaje";
+            // load of date storage 
             valuesForm.forEach((valueInput) => {
                 if (valueInput.id) {
                     valueInput.value = property[valueInput.id];
@@ -53,15 +60,16 @@ const submitForm = async (form, url) => {
         valuesForm.forEach(valueInput => {
             infoProperty[valueInput.id] = valueInput.value;
         });
+
         //space empty in form-error of edition property
-
-
-        const labelsNodeList = document.querySelectorAll('label');
-        console.log(labelsNodeList);
-        const arryaLabel = [...labelsNodeList];
+        console.log(infoProperty);
+        const listaLabel = document.querySelectorAll('label');
+        console.log(listaLabel);
+        const arryaLabel = [...listaLabel];
         console.log(arryaLabel);
+        console.log(typeof arryaLabel);
 
-        //  validSpaceForm(arryaLabel, infoProperty );  
+        validSpaceForm(arryaLabel, infoProperty );  
         //Editar
         if (editForm) {
             await putDataFetch(url, infoProperty)
@@ -95,30 +103,39 @@ const submitForm = async (form, url) => {
 };
 
 
-// const validSpaceForm = (arryaLabel, propertyInfo) => {
-//     const keyLabels = arryaLabel.map((key) => ({
-//         labelName: key.innerHTML,
-//         keyName: key.getAttribute("for"),
-//     }));
-//     console.log(keyLabels);
-//     console.log(keyLabels[0].keyName);
-//     console.log(typeof keyLabels[0].keyName);
-//     console.log(propertyInfo);
+const validSpaceForm = (arryaLabel, propertyInfo) => {
+    const keyLabels = arryaLabel.map((key) => ({
+        labelName: key.innerHTML,
+        keyName: key.getAttribute("for"),
+    }));
+    console.log(keyLabels);
+    console.log(keyLabels[0].keyName);
+    console.log(typeof keyLabels[0].keyName);
+    console.log(propertyInfo);
 
-//     let keyStr = "";
-//     for (const key in propertyInfo) {
-//         const propertyA = propertyInfo[key];
-//         console.log(propertyA);
-//         console.log(key);
-//         console.log(typeof key);
+    let keyStr = "";
 
-//         if (!propertyA) {
-//             let labelFound = keyLabels.find(label2 => label2.keyName === key);
-//             console.log(labelFound);
-//             keyStr += labelFound.labelName + ", ";
-//         };
-//     };
-// };
+    for (const key in propertyInfo) {
+        const propertyA = propertyInfo[key];
+     //   console.log(propertyA);
+        console.log(key);
+        console.log(typeof key);
+        // if(keyLabels[0].keyName === key){
+        //     console.log("son iguales");
+        // }       
+
+     //   if(!propertyA){
+            let labelFound = keyLabels.find(label2 => {
+                console.log(label2.keyName);
+                console.log(typeof label2.keyName);
+                label2.keyName == key
+            });
+
+            console.log(labelFound);
+         //   keyStr += labelFound.labelName + ", ";
+       // };
+    };
+};
 
 // date 
 const containerDate = document.getElementById("date");
